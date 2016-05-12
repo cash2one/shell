@@ -1,0 +1,2 @@
+#!/bin/bash
+for i in `awk '{print $1}' keywords.txt`;do curl -s "http://www.baidu.com/s?wd=$i&rn=30" | grep -o "url\":\"http://www.baidu.com/link[^\"]*" | sed 's/url":"//' | xargs curl -s | grep -o "http://[^\"]*" >>duishou.txt ;sleep 2;done

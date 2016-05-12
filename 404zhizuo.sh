@@ -1,0 +1,1 @@
+awk 'BEGIN{print "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset>"}{print "<url>\n<loc>"$0"</loc>\n<lastmod>2016-01-26</lastmod>\n<changefreq>always</changefreq>\n</url>"}END{print "</urlset>"}' link.txt > zhishi_jiaju_404.xml
